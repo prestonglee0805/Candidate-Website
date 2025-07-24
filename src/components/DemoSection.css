@@ -1,0 +1,210 @@
+.demo-section {
+  width: 100vw;
+  background: transparent;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 6rem 2rem 6rem 2rem;
+}
+
+.demo-container {
+  max-width: 1400px;
+  width: 100%;
+}
+
+.demo-content {
+  padding: 2.5rem 3rem 2.5rem 3rem;
+  background: transparent;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.demo-layout {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.demo-text-section {
+  flex: 0 0 35%;
+  text-align: left;
+}
+
+.demo-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(45deg, #ff6b35, #8e44ad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.demo-description {
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0;
+  text-align: left;
+  max-width: 100%;
+}
+
+.video-container {
+  flex: 0 0 65%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.demo-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #000;
+}
+
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+  .demo-container {
+    max-width: 100%;
+  }
+  
+  .demo-content {
+    padding: 2.5rem 2rem;
+    background: transparent;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .demo-section {
+    padding: 4rem 1rem 4rem 1rem;
+  }
+  
+  .demo-container {
+    max-width: 100%;
+  }
+  
+  .demo-content {
+    padding: 2rem 1.5rem;
+    background: transparent;
+  }
+
+  .demo-layout {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .demo-text-section {
+    text-align: center;
+  }
+  
+  .demo-title {
+    margin-bottom: 1.5rem;
+  }
+  
+  .demo-description {
+    margin-bottom: 0;
+    line-height: 1.7;
+    text-align: center;
+  }
+
+  .video-container {
+    border-radius: 8px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .demo-section {
+    padding: 2rem 1rem 4rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .demo-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .demo-content {
+    padding: 1.5rem 1rem;
+    background: transparent;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .demo-layout {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .demo-text-section {
+    text-align: center;
+  }
+  
+  .demo-title {
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+  
+  .demo-description {
+    margin-bottom: 0;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .video-container {
+    border-radius: 6px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 320px) {
+  .demo-section {
+    padding: 1.5rem 0.5rem 3rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .demo-content {
+    padding: 1rem 0.75rem;
+    margin: 0 auto;
+    background: transparent;
+    width: 100%;
+    max-width: 100%;
+  } 
+
+  .demo-container{
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .demo-layout {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .demo-text-section {
+    text-align: center;
+  }
+  
+  .demo-title {
+    margin-bottom: 0.75rem;
+  }
+  
+  .demo-description {
+    margin-bottom: 0;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .video-container {
+    border-radius: 4px;
+  }
+}

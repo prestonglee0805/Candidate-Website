@@ -1,0 +1,316 @@
+.about-section {
+  width: 100vw;
+  background: transparent;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 6rem 2rem 6rem 2rem;
+}
+
+.about-container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.about-content {
+  padding: 2.5rem 3rem 2.5rem 3rem;
+  background: transparent;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.about-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  color: white;
+  margin-bottom: 3rem;
+  background: linear-gradient(45deg, #ff6b35, #8e44ad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.about-story {
+  margin-bottom: 4rem;
+}
+
+.about-text {
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.about-text:last-child {
+  margin-bottom: 0;
+}
+
+.team-section {
+  margin-bottom: 4rem;
+}
+
+.team-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: white;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.team-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.team-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(142, 68, 173, 0.3);
+}
+
+.team-image {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.team-name {
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.team-role {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  color: #ff6b35;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.team-description {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.values-section {
+  margin-top: 4rem;
+}
+
+.values-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: white;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.value-item {
+  text-align: center;
+}
+
+.value-name {
+  font-size: clamp(1.3rem, 3vw, 1.5rem);
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #8e44ad, #ff6b35);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.value-description {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+  .about-container {
+    max-width: 100%;
+  }
+  
+  .about-content {
+    padding: 2.5rem 2rem;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 4rem 1rem 4rem 1rem;
+  }
+  
+  .about-container {
+    max-width: 100%;
+  }
+  
+  .about-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .about-title {
+    margin-bottom: 2rem;
+  }
+
+  .about-story {
+    margin-bottom: 3rem;
+  }
+
+  .team-section {
+    margin-bottom: 3rem;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .team-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .team-image {
+    font-size: 3rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 2rem 1rem 4rem 1rem;
+  }
+  
+  .about-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .about-content {
+    padding: 1.5rem 1rem;
+    background: transparent;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-story {
+    margin-bottom: 2.5rem;
+  }
+
+  .team-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .team-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .team-image {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .values-section {
+    margin-top: 2.5rem;
+  }
+
+  .values-grid {
+    gap: 1.25rem;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 320px) {
+  .about-section {
+    padding: 1.5rem 0.5rem 3rem 0.5rem;
+  }
+  
+  .about-content {
+    padding: 1rem 0.75rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  } 
+
+  .about-container{
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .about-title {
+    margin-bottom: 1.5rem;
+  }
+
+  .about-story {
+    margin-bottom: 2rem;
+  }
+
+  .team-section {
+    margin-bottom: 2rem;
+  }
+
+  .team-card {
+    padding: 1rem 0.75rem;
+  }
+
+  .team-image {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .values-section {
+    margin-top: 2rem;
+  }
+
+  .values-grid {
+    gap: 1rem;
+  }
+}
