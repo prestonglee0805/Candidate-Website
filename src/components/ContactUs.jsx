@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   Box,
@@ -13,6 +13,7 @@ import {
   ArrowForward
 } from '@mui/icons-material'
 import { styled } from '@mui/material/styles'
+import candidateLogo from '../assets/Logos/candidateLogo.png'
 
 const GradientTypography = styled(Typography)(({ theme }) => ({
   background: 'linear-gradient(45deg, #ff6b35, #8e44ad)',
@@ -39,6 +40,7 @@ const AnimatedGradientText = styled(Typography)(({ theme }) => ({
 function ContactUs() {
   const ref = useRef(null)
   const navigate = useNavigate()
+  const [isButtonHovered, setIsButtonHovered] = useState(false)
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"]
@@ -104,7 +106,7 @@ function ContactUs() {
                   mb: 6
                 }}
               >
-                Have questions about our platform? Want to schedule a demo? 
+                Have questions about our platform?
                 Let's discuss how we can transform your technical interview process.
               </Typography>
             </Box>
@@ -119,29 +121,53 @@ function ContactUs() {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <Box textAlign="center" mb={8}>
-              <Button
-                variant="contained"
-                size="large"
-                endIcon={<ArrowForward />}
-                onClick={() => navigate('/contact')}
-                sx={{
-                  background: 'linear-gradient(45deg, #ff6b35, #8e44ad)',
-                  borderRadius: '16px',
-                  px: 6,
-                  py: 2,
-                  fontSize: '1.3rem',
-                  fontWeight: 700,
-                  textTransform: 'none',
-                  boxShadow: '0 15px 40px rgba(142, 68, 173, 0.3)',
-                  '&:hover': {
-                    background: 'linear-gradient(45deg, #8e44ad, #ff6b35)',
-                    boxShadow: '0 20px 50px rgba(142, 68, 173, 0.4)',
-                    transform: 'translateY(-3px)',
-                  },
+              <motion.div
+                initial={{
+                  scale: 1,
+                  filter: "drop-shadow(0 0 0px rgba(255, 107, 53, 0))"
                 }}
+                animate={{
+                  scale: isButtonHovered ? 1.05 : 1,
+                  filter: isButtonHovered 
+                    ? "drop-shadow(0 0 15px rgba(255, 107, 53, 0.4))" 
+                    : "drop-shadow(0 0 0px rgba(255, 107, 53, 0))"
+                }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+                onMouseEnter={() => setIsButtonHovered(true)}
+                onMouseLeave={() => setIsButtonHovered(false)}
               >
-                Get in Touch
-              </Button>
+                <Button
+                  variant="contained"
+                  size="large"
+                  endIcon={
+                    <motion.div
+                      animate={{ x: isButtonHovered ? 5 : 0 }}
+                      transition={{ duration: 0.3, ease: "easeOut" }}
+                      style={{ display: 'flex', alignItems: 'center' }}
+                    >
+                      <ArrowForward />
+                    </motion.div>
+                  }
+                  onClick={() => navigate('/contact')}
+                  sx={{
+                    background: '#ff6b35',
+                    borderRadius: '16px',
+                    px: 6,
+                    py: 2,
+                    fontSize: '1.3rem',
+                    fontWeight: 700,
+                    textTransform: 'none',
+                    boxShadow: '0 10px 30px rgba(255, 107, 53, 0.2)',
+                    '&:hover': {
+                      background: '#ff8c5a',
+                      boxShadow: '0 15px 40px rgba(255, 107, 53, 0.3)',
+                    },
+                  }}
+                >
+                  Get in Touch
+                </Button>
+              </motion.div>
             </Box>
           </motion.div>
 
@@ -158,12 +184,28 @@ function ContactUs() {
               </Grid>
               <Grid item xs={12} md={6}>
                 <Box textAlign={{ xs: 'center', md: 'right' }}>
-                  <Typography
-                    variant="body2"
-                    sx={{ color: 'rgba(255, 255, 255, 0.6)', fontWeight: 300 }}
-                  >
-                    © 2025 Candidate.
-                  </Typography>
+                  <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: { xs: 'center', md: 'flex-end' } }}>
+                    <motion.img 
+                      src={candidateLogo} 
+                      alt="Candidate Logo" 
+                      style={{ 
+                        height: '20px', 
+                        width: 'auto', 
+                        marginRight: '8px',
+                        opacity: 0.6,
+                        cursor: 'pointer'
+                      }}
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{ duration: 0.3, ease: "easeOut" }}
+                    />
+                    <Typography
+                      variant="body2"
+                      sx={{ color: 'rgba(255, 255, 255, 0.6)', fontWeight: 300 }}
+                    >
+                      © 2025 Candidate.
+                    </Typography>
+                  </Box>
                 </Box>
               </Grid>
             </Grid>

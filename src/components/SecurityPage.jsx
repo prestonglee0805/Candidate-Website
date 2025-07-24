@@ -58,9 +58,9 @@ function SecurityPage() {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               <p className="security-text">
-                In today's digital landscape, security isn't just a feature—it's the foundation of trust. 
-                Our platform delivers enterprise-grade protection that works seamlessly behind the scenes, 
-                so you can focus on what matters most: finding the right talent.
+                Candidate is rethinking the technical interview from the ground up to ensure safety, fairness, and security in a world of AI. Our invisible safeguards help companies assess real skill, not borrowed answers.
+
+
               </p>
             </motion.div>
 
@@ -77,33 +77,24 @@ function SecurityPage() {
                   whileHover={{ scale: 1.05, rotateY: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="feature-icon">👁️</div>
-                  <div className="feature-content">
-                    <span className="feature-title">Real-Time Session Monitoring</span>
-                    <p className="feature-description">Actively tracks user behavior during interviews to detect irregular patterns, tab switching, or unauthorized activity.</p>
-                  </div>
+                  <div className="feature-icon"> 🖥️</div>
+                  <span className="feature-text">On-Screen Overlay Monitoring</span>
                 </motion.div>
                 <motion.div 
                   className="security-feature"
                   whileHover={{ scale: 1.05, rotateY: -5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="feature-icon">🚫</div>
-                  <div className="feature-content">
-                    <span className="feature-title">Overlay & Application Detection</span>
-                    <p className="feature-description">Flags the use of illegal overlays, screen-sharing tools, or external applications that compromise interview integrity.</p>
-                  </div>
+                  <div className="feature-icon">📸</div>
+                  <span className="feature-text">Screen Capture Detection</span>
                 </motion.div>
                 <motion.div 
                   className="security-feature"
                   whileHover={{ scale: 1.05, rotateY: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="feature-icon">🏗️</div>
-                  <div className="feature-content">
-                    <span className="feature-title">Secure, Sandboxed Coding Environment</span>
-                    <p className="feature-description">Code is executed in a locked environment with restricted access, preventing the use of external resources or AI assistance.</p>
-                  </div>
+                  <div className="feature-icon">🔒</div>
+                  <span className="feature-text">Illegal Tool Usage Prevention</span>
                 </motion.div>
               </div>
             </motion.div>
@@ -116,9 +107,7 @@ function SecurityPage() {
               transition={{ duration: 0.8, delay: 1.2 }}
             >
               <p className="security-text">
-                From encrypted data transmission to secure code execution environments, every interaction 
-                is protected by military-grade security protocols. Your candidates' privacy and your 
-                company's intellectual property remain safe, always.
+               By running intelligent protections behind the scenes, we create a level playing field—so teams can focus on identifying real talent, not navigating noise.
               </p>
             </motion.div>
           </div>

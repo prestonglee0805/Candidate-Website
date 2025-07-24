@@ -44,7 +44,7 @@
 }
 
 .contact-main-title {
-  font-size: clamp(2.5rem, 8vw, 3.5rem) !important;
+  font-size: clamp(3.5rem, 10vw, 5rem) !important;
   font-weight: 700 !important;
   color: white !important;
   margin-bottom: 1rem !important;
@@ -180,7 +180,7 @@
 }
 
 .back-to-home-button {
-  color: #00d4ff !important;
+  color: #ff6b35 !important;
   text-transform: none !important;
 }
 
