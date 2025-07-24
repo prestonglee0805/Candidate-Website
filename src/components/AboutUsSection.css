@@ -1,0 +1,257 @@
+.aboutus-section {
+  width: 100vw;
+  background: transparent;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 6rem 0rem 3rem 0rem;
+}
+
+.aboutus-container {
+  max-width: 1200px;
+  width: 100%; 
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.aboutus-content {
+  background: transparent;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.aboutus-hero {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.aboutus-title {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0;
+  background: linear-gradient(135deg, #ff6b35, #8e44ad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.aboutus-main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+}
+
+.aboutus-description {
+  text-align: center;
+  max-width: 800px;
+}
+
+.aboutus-text {
+  font-size: clamp(1.3rem, 3.5vw, 1.6rem);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.highlight {
+  background: linear-gradient(45deg, #ff6b35, #8e44ad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+.companies-section {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.companies-title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: white;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+}
+
+.logos-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+}
+
+
+.logos-track {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.logo-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 80px;
+}
+
+.company-logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: brightness(1.1) contrast(1.1) drop-shadow(0 0 15px rgba(255, 107, 53, 0.2));
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.company-logo-img:hover {
+  filter: brightness(1.3) contrast(1.2) drop-shadow(0 0 20px rgba(255, 107, 53, 0.4));
+  transform: scale(1.05);
+}
+
+.team-values {
+  text-align: center;
+  max-width: 900px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.values-text {
+  font-size: clamp(1.1rem, 3vw, 1.3rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+  .aboutus-container {
+    padding: 0 1.5rem;
+  }
+  
+  .logo-item {
+    width: 100px;
+    height: 70px;
+  }
+  
+  .logos-track {
+    gap: 3rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .aboutus-section {
+    padding: 4rem 0rem;
+  }
+  
+  .aboutus-container {
+    padding: 0 1rem;
+  }
+  
+  .aboutus-main-content {
+    gap: 3rem;
+  }
+  
+  .logos-container {
+    height: 100px;
+  }
+  
+  .logo-item {
+    width: 80px;
+    height: 60px;
+  }
+  
+  .logos-track {
+    gap: 2.5rem;
+  }
+  
+  .team-values {
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .aboutus-section {
+    padding: 3rem 0rem;
+  }
+  
+  .aboutus-container {
+    padding: 0 1rem;
+  }
+  
+  .aboutus-main-content {
+    gap: 2.5rem;
+  }
+  
+  .logos-container {
+    height: 80px;
+  }
+  
+  .logo-item {
+    width: 60px;
+    height: 45px;
+  }
+  
+  .logos-track {
+    gap: 2rem;
+  }
+  
+  .team-values {
+    padding: 1.25rem;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 320px) {
+  .aboutus-section {
+    padding: 2rem 0rem;
+  }
+  
+  .aboutus-container {
+    padding: 0 0.5rem;
+  }
+  
+  .aboutus-hero {
+    margin-bottom: 3rem;
+  }
+  
+  .companies-title {
+    margin-bottom: 2rem;
+  }
+  
+  .logos-container {
+    height: 60px;
+  }
+  
+  .logo-item {
+    width: 50px;
+    height: 35px;
+  }
+  
+  .logos-track {
+    gap: 1.5rem;
+  }
+}

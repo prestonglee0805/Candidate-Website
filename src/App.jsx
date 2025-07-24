@@ -1,21 +1,15 @@
-import HeroSection from './components/HeroSection'
-import MissionStatement from './components/MissionStatement'
-import MatrixGrid from './components/MatrixGrid' 
-import DemoSection from './components/DemoSection'
-import FutureIterations from './components/FutureIterations'
-import AboutUs from './components/AboutUs'
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import ContactUsPage from './pages/ContactUsPage'
 
 function App() {
   return (
-    <div>
-      <MatrixGrid />
-      <HeroSection />
-      <MissionStatement /> 
-      <DemoSection /> 
-      <FutureIterations />
-      <AboutUs />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/contact" element={<ContactUsPage />} />
+      </Routes>
+    </Router>
   )
 }
 

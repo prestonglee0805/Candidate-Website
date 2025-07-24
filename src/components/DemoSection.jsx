@@ -37,7 +37,7 @@ function DemoSection() {
             >
               <h2 className="demo-title">See It In Action</h2>
               <p className="demo-description">
-                This demo of Candidate is a minimal viable prototype (MVP) showcasing our approach to improving the technical interview experience. It's an early iteration focused on our core security functionality. We planto gather feedback, iterate, and shape the future of Candidate.
+                This demo of Candidate is a minimal viable product (MVP) showcasing our approach to improving the technical interview experience. It's an early iteration focused on our core security functionality. We planto gather feedback, iterate, and shape the future of Candidate.
               </p>
             </motion.div>
             <motion.div 

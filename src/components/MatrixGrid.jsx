@@ -38,7 +38,7 @@ function MatrixGrid() {
     let isVisible = false
     let fadeOpacity = 0
     let lastToggle = Date.now()
-    const visibleDuration = 6000// 6 seconds visible
+    const visibleDuration = 8000// 6 seconds visible
     const hiddenDuration = 7000 // 15 seconds hidden
     const fadeDuration = 4000 // 5 seconds fade in/out
 

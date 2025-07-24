@@ -1,0 +1,219 @@
+/* Contact Us Page Styles */
+
+.contact-page {
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #000000 0%, #191818 100%);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-header {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-bottom: none !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+}
+
+.contact-content-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.contact-title-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-main-title {
+  font-size: clamp(2.5rem, 8vw, 3.5rem) !important;
+  font-weight: 700 !important;
+  color: white !important;
+  margin-bottom: 1rem !important;
+}
+
+.contact-subtitle {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-weight: 300 !important;
+  max-width: 500px !important;
+  margin: 0 auto !important;
+}
+
+
+.contact-form-container {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 16px !important;
+  padding: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.contact-form-title {
+  color: white !important;
+  margin-bottom: 2rem !important;
+  text-align: center !important;
+  font-weight: 600 !important;
+}
+
+.contact-form-stack {
+  gap: 1.5rem !important;
+}
+
+.contact-text-field .MuiOutlinedInput-root {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+  color: white !important;
+}
+
+.contact-text-field .MuiOutlinedInput-root fieldset {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.contact-text-field .MuiOutlinedInput-root:hover fieldset {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.contact-text-field .MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: #8e44ad !important;
+}
+
+.contact-text-field .MuiInputLabel-root {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.contact-text-field .MuiInputLabel-root.Mui-focused {
+  color: #8e44ad !important;
+}
+
+.contact-text-field .MuiOutlinedInput-input {
+  color: white !important;
+}
+
+.contact-submit-button {
+  background: #ff6b35 !important;
+  border-radius: 8px !important;
+  padding: 12px 32px !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3) !important;
+}
+
+.contact-submit-button:hover {
+  background: #e55a2b !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4) !important;
+}
+
+.social-links-container {
+  text-align: center !important;
+  margin-bottom: 2rem !important;
+}
+
+.social-links-title {
+  color: white !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.social-links-stack {
+  justify-content: center !important;
+  gap: 1.5rem !important;
+}
+
+.social-icon-button {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.social-icon-button.linkedin {
+  color: #0077b5 !important;
+}
+
+.social-icon-button.linkedin:hover {
+  background-color: rgba(0, 119, 181, 0.1) !important;
+}
+
+.social-icon-button.github {
+  color: #ffffff !important;
+}
+
+.social-icon-button.github:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.social-icon-button.email {
+  color: #ff6b35 !important;
+}
+
+.social-icon-button.email:hover {
+  background-color: rgba(255, 107, 53, 0.1) !important;
+}
+
+.contact-footer {
+  text-align: center !important;
+  padding-top: 2rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.contact-footer-text {
+  color: rgba(255, 255, 255, 0.6) !important;
+  margin-bottom: 1rem !important;
+}
+
+.back-to-home-button {
+  color: #00d4ff !important;
+  text-transform: none !important;
+}
+
+.back-to-home-button:hover {
+  color: #ff6b35 !important;
+  background-color: transparent !important;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #ff6b35, #8e44ad) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-weight: 800 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-title-container {
+    margin-bottom: 2rem;
+  }
+  
+  .contact-form-container {
+    padding: 1.5rem !important;
+  }
+  
+  .social-links-stack {
+    gap: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form-container {
+    padding: 1rem !important;
+  }
+}

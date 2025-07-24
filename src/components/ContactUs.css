@@ -1,0 +1,342 @@
+.contact-section {
+  width: 100vw;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.1) 100%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0rem 0rem 4rem 0rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.contact-container {
+  max-width: 1200px;
+  width: 100%; 
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contact-content {
+  background: transparent;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.contact-hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.contact-word {
+  color: white;
+  display: block;
+}
+
+.contact-highlight {
+  background: linear-gradient(135deg, #ff6b35, #8e44ad, #00d4ff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease-in-out infinite;
+  display: block;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.contact-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-text {
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.contact-methods {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.contact-method {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  min-height: 280px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.contact-method:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(142, 68, 173, 0.4);
+  transform: translateY(-5px);
+}
+
+.method-icon {
+  font-size: 4rem;
+  filter: drop-shadow(0 0 20px rgba(255, 107, 53, 0.3));
+  margin-bottom: 1rem;
+}
+
+.method-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  flex: 1;
+}
+
+.method-title {
+  font-size: clamp(1.3rem, 3vw, 1.5rem);
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  background: linear-gradient(45deg, #ff6b35, #8e44ad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.method-description {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  font-weight: 300;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.method-action {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  font-weight: 600;
+  color: #00d4ff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.3s ease;
+}
+
+.contact-method:hover .method-action {
+  color: #ff6b35;
+}
+
+.contact-footer {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-logo {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 800;
+  background: linear-gradient(45deg, #ff6b35, #8e44ad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+.footer-tagline {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  font-weight: 300;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-copyright {
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  font-weight: 300;
+}
+
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+  .contact-container {
+    padding: 0 1.5rem;
+  }
+  
+  .contact-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .contact-method {
+    padding: 2.5rem 1.5rem;
+    min-height: 260px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 4rem 0rem 3rem 0rem;
+    min-height: auto;
+  }
+  
+  .contact-container {
+    padding: 0 1rem;
+  }
+  
+  .contact-content {
+    gap: 3rem;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .contact-method {
+    padding: 2rem 1.5rem;
+    min-height: 240px;
+  }
+  
+  .method-icon {
+    font-size: 3rem;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  
+  .footer-right {
+    text-align: center;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 3rem 0rem 2rem 0rem;
+  }
+  
+  .contact-container {
+    padding: 0 1rem;
+  }
+  
+  .contact-content {
+    gap: 2.5rem;
+  }
+  
+  .contact-hero {
+    margin-bottom: 1rem;
+  }
+  
+  .contact-title {
+    gap: 0.5rem;
+  }
+  
+  .contact-grid {
+    max-width: 320px;
+  }
+  
+  .contact-method {
+    padding: 1.5rem 1rem;
+    min-height: 220px;
+  }
+  
+  .method-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 320px) {
+  .contact-section {
+    padding: 2rem 0rem 1.5rem 0rem;
+  }
+  
+  .contact-container {
+    padding: 0 0.5rem;
+  }
+  
+  .contact-content {
+    gap: 2rem;
+  }
+  
+  .contact-grid {
+    max-width: 280px;
+  }
+  
+  .contact-method {
+    padding: 1.25rem 0.75rem;
+    min-height: 200px;
+  }
+  
+  .method-icon {
+    font-size: 2rem;
+  }
+}

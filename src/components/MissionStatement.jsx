@@ -22,7 +22,28 @@ function MissionStatement() {
           style={{ opacity, y, scale }}
           transition={{ duration: 0.1 }}
         >
-          <h2 className="mission-title">Our Mission</h2>
+          <div className="mission-hero">
+            <h2 className="mission-title">
+              <motion.span 
+                className="mission-word"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                Our
+              </motion.span>
+              <motion.span 
+                className="mission-highlight"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
+                Mission
+              </motion.span>
+            </h2>
+          </div>
           
           <div className="leetcode-container">
             <div className="leetcode-header">
