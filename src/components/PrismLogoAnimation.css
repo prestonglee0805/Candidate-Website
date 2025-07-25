@@ -51,6 +51,35 @@
   animation: logoGlow 2s ease-in-out infinite alternate, logoFloat 3s ease-in-out infinite;
 }
 
+/* Logo segments styling (from navbar) - bigger for animation */
+.logo-segments {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: clamp(150px, 18vw, 200px);
+  width: clamp(100px, 14vw, 140px);
+}
+
+.logo-segment {
+  width: auto;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 53%;
+  transform-origin: center;
+  transform: translateX(-50%);
+  height: clamp(90px, 15vw, 120px);
+}
+
+.segment-1 {
+  z-index: 2;
+}
+
+.segment-2 {
+  z-index: 1;
+}
+
 @keyframes logoGlow {
   0% {
     filter: drop-shadow(0 0 20px rgba(255, 107, 53, 0.6)) 
@@ -226,6 +255,15 @@
     width: 80px;
   }
   
+  .logo-segments {
+    height: clamp(96px, 15vw, 126px);
+    width: clamp(66px, 10vw, 90px);
+  }
+  
+  .logo-segment {
+    height: clamp(66px, 12vw, 90px);
+  }
+  
   .prism {
     width: 80px;
     height: 80px;
@@ -264,6 +302,15 @@
 @media (max-width: 480px) {
   .candidate-logo-animation {
     width: 60px;
+  }
+  
+  .logo-segments {
+    height: clamp(84px, 18vw, 105px);
+    width: clamp(54px, 13.5vw, 72px);
+  }
+  
+  .logo-segment {
+    height: clamp(54px, 13.5vw, 72px);
   }
   
   .prism {
