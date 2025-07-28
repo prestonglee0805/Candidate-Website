@@ -183,7 +183,7 @@ function HeroSection() {
           transition={{ type: "spring", stiffness: 300 }}
           onClick={() => { scrollToAbout(); setIsMobileMenuOpen(false); }}
         >
-          About Us
+          About
         </motion.button>
         <motion.button 
           className="nav-button"
